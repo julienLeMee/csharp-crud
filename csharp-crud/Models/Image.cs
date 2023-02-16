@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace csharp_crud.Models;
 
 public class Image

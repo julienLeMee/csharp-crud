@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace csharp_crud.Models;
 
 public class Fruit
@@ -6,9 +8,9 @@ public class Fruit
 
     public int Id { get; set; } // get permet de récupérer la valeur de l'attribut, set permet de modifier la valeur de l'attribut
 
-    [StringLength (50, MinimumLength = 3)] // permet de limiter la taille de la chaine de caractère
+    [StringLength(50, MinimumLength = 3)]
     [Required] // permet de rendre l'attribut obligatoire
-    [Display (Name = "Nom")] // permet de changer le nom de l'attribut dans le formulaire
+    [Display(Name = "Nom")] // permet de changer le nom de l'attribut dans le formulaire
     public string Name { get; set; }
 
     public string? Description { get; set; } // ? permet de rendre l'attribut facultatif
