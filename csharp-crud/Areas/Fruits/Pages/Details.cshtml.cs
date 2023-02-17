@@ -23,12 +23,12 @@ namespace csharp_crud.Areas.Fruits.Pages
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Fruit == null)
+            if (id == null || _context.Fruits == null)
             {
                 return NotFound();
             }
 
-            var fruit = await _context.Fruit.FirstOrDefaultAsync(m => m.Id == id);
+            var fruit = await _context.Fruits.FirstOrDefaultAsync(m => m.Id == id);
             if (fruit == null)
             {
                 return NotFound();

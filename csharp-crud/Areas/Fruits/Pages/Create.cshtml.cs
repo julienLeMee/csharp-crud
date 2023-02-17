@@ -31,12 +31,12 @@ namespace csharp_crud.Areas.Fruits.Pages
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Fruit == null || Fruit == null)
+          if (!ModelState.IsValid || _context.Fruits == null || Fruit == null)
             {
                 return Page();
             }
 
-            _context.Fruit.Add(Fruit);
+            _context.Fruits.Add(Fruit);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

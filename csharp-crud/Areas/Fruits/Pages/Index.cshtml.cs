@@ -23,9 +23,9 @@ namespace csharp_crud.Areas.Fruits.Pages
 
         public async Task OnGetAsync()
         {
-            if (_context.Fruit != null)
+            if (_context.Fruits != null)
             {
-                Fruit = await _context.Fruit.ToListAsync();
+                Fruit = await _context.Fruits.ToListAsync();
             }
         }
     }
